@@ -1,2 +1,5 @@
 build
 node_modules
+variables.ps1
+src/firebase.js
+variables.ps1
