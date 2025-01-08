@@ -186,9 +186,8 @@ const CalendarHeatmap = (props) => {
     if (props.horizontal) {
       return `translate(${getWeekdayLabelSize()}, 0)`;
     }
-    return `translate(${
-      getWeekWidth() + MONTH_LABEL_GUTTER_SIZE
-    }, ${getWeekdayLabelSize()})`;
+    return `translate(${getWeekWidth() + MONTH_LABEL_GUTTER_SIZE
+      }, ${getWeekdayLabelSize()})`;
   }
 
   function getTransformForAllWeeks() {
@@ -253,7 +252,7 @@ const CalendarHeatmap = (props) => {
     const value = getValueForIndex(index);
 
     const rect = (
-      // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
+      //// eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
       <rect
         key={index}
         width={SQUARE_SIZE}
@@ -320,9 +319,8 @@ const CalendarHeatmap = (props) => {
     }
     return props.weekdayLabels.map((weekdayLabel, dayIndex) => {
       const [x, y] = getWeekdayLabelCoordinates(dayIndex);
-      const cssClasses = `${
-        props.horizontal ? "" : `${CSS_PSEDUO_NAMESPACE}small-text`
-      } ${CSS_PSEDUO_NAMESPACE}weekday-label`;
+      const cssClasses = `${props.horizontal ? "" : `${CSS_PSEDUO_NAMESPACE}small-text`
+        } ${CSS_PSEDUO_NAMESPACE}weekday-label`;
       // eslint-disable-next-line no-bitwise
       return dayIndex & 1 ? (
         <text key={`${x}${y}`} x={x} y={y} className={cssClasses}>
