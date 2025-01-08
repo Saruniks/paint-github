@@ -1,0 +1,2 @@
+$bucketName = "s3://paintgithub-awph6dgawdavsrfbdbdfrbsdfefesfs/"
+$cloudfrontDistributionId = "B75OTT6Q84TTN8"
